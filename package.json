@@ -1,0 +1,14 @@
+{
+  "name": "teg",
+  "version": "0.0.0",
+  "description": "Template Generator",
+  "main": "index.js",
+  "bin": {
+    "teg": "./index.js"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "tu4mo",
+  "license": "ISC",
+  "dependencies": {}
+}
