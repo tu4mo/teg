@@ -1,6 +1,6 @@
 # teg
 
-*teg* is command-line utility to create template files.
+*teg* is command-line utility to generate template files.
 
 ## Installation
 
