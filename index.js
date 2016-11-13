@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
+
 const argv = process.argv
+const selectedTemplate = argv[2] || ''
+const selectedFile = argv[3] || ''
 
-const template = argv[2] || ''
-const file = argv[3] || ''
-
-if (!template || !file) {
-  return console.log('usage: tecr [options] <template> <file>')
+if (!selectedTemplate || !selectedFile) {
+  console.log('usage: tecr [options] <template> <file>')
+  process.exit(1)
 }
