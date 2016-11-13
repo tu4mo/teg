@@ -50,13 +50,13 @@ export default MyComponent
 }
 ```
 
-To generate templates, run:
+To generate files from this template, run:
 
 ```sh
 teg react-class NewComponent
 ```
 
-This will generate two template files, `NewComponent.js` and `NewComponent.css`, in the current working directory.
+This will generate two new files, `NewComponent.js` and `NewComponent.css`, in the current working directory.
 
 ## TODO
 
