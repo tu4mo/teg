@@ -55,3 +55,8 @@ teg react-class NewComponent
 ```
 
 This will generate two template files, `NewComponent.js` and `NewComponent.css`, in the current working directory.
+
+## TODO
+
+* `{{variables}}` inside templates
+* Templates with folders
