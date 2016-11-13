@@ -18,13 +18,13 @@ teg <template> <file>
 
 ## Templates
 
-By default, *teg* looks for templates in `~/.teg/` directory.
+Templates are just folders that contain the files used to generate new files. By default, *teg* looks for templates in `~/.teg/` directory. Files named with `index.*` are automatically renamed.
 
 ### Example of a template
 
-Add this to file `~/.teg/react-class/index.js`
-
 ```javascript
+/* ~/.teg/react-class/index.js */
+
 import React, { Component } from 'react'
 
 class MyComponent extends Component {
@@ -40,9 +40,9 @@ class MyComponent extends Component {
 export default MyComponent
 ```
 
-And this to file `~/.teg/react-class/index.css`
-
 ```css
+/* ~/.teg/react-class/index.css */
+
 .my-component {
   display: flex;
 }
