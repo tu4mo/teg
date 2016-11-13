@@ -8,7 +8,7 @@ const selectedTemplate = argv[2] || ''
 const selectedFile = argv[3] || ''
 
 if (!selectedTemplate || !selectedFile) {
-  console.log('usage: tecr [options] <template> <file>')
+  console.log('usage: teg <template> <file>')
   process.exit(1)
 }
 
