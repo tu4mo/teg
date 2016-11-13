@@ -6,7 +6,9 @@
   "bin": {
     "teg": "./index.js"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "mocha"
+  },
   "keywords": [],
   "author": "tu4mo",
   "license": "ISC",
