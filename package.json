@@ -1,6 +1,6 @@
 {
   "name": "teg",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Template Generator",
   "main": "index.js",
   "bin": {
