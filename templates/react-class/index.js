@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class MyComponent extends Component {
+class {{file}} extends Component {
   render () {
     return (
-      <div className="my-component">
+      <div className="{{file}}">
 
       </div>
     )
   }
 }
 
-export default MyComponent
+export default {{file}}
