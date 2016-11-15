@@ -7,7 +7,7 @@
     "teg": "./index.js"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "eslint . && mocha"
   },
   "keywords": [],
   "author": "tu4mo",
