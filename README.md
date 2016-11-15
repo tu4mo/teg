@@ -56,12 +56,13 @@ To generate files from this template, run:
 teg react-class NewComponent
 ```
 
-This will generate two new files, `NewComponent.js` and `NewComponent.css`, in the current working directory, replacing `{{file}}` with `NewComponent`.
+This will generate two new files, `NewComponent.js` and `NewComponent.css`, in the current working directory, replacing `{{file}}` tag with `NewComponent`.
 
 ## TODO
 
-* Custom `{{variables}}` inside templates
+* Custom `{{tags}}` inside templates
 * Piping for variables (lowercase, camelcase, etc.)
 * Templates with folders
 * Ability to use literally index.* named templates
 * Automatically install default templates to `~/.teg`
+* Configuration for tags' formatting
