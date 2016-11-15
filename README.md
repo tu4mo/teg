@@ -60,6 +60,7 @@ This will generate two new files, `NewComponent.js` and `NewComponent.css`, in t
 
 ## TODO
 
-* `{{variables}}` inside templates
+* Custom `{{variables}}` inside templates
+* Piping for variables (lowercase, camelcase, etc.)
 * Templates with folders
 * Ability to use literally index.* named templates
