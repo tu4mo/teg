@@ -1,6 +1,6 @@
 # Change Log
 
-## 0.2 (2016-11-15)
+## 0.2.0 (2016-11-15)
 
 * Add template compiling with {{file}} variable
 
