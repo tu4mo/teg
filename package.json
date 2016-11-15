@@ -4,7 +4,7 @@
   "description": "Template Generator",
   "main": "index.js",
   "bin": {
-    "teg": "./index.js"
+    "teg": "./src/index.js"
   },
   "scripts": {
     "test": "eslint . && mocha"
