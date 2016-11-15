@@ -64,3 +64,4 @@ This will generate two new files, `NewComponent.js` and `NewComponent.css`, in t
 * Piping for variables (lowercase, camelcase, etc.)
 * Templates with folders
 * Ability to use literally index.* named templates
+* Automatically install default templates to `~/.teg`
