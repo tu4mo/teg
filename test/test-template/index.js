@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './{{file}}.css'
+
 class {{file}} extends Component {
   render () {
     return (
