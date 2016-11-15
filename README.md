@@ -62,3 +62,4 @@ This will generate two new files, `NewComponent.js` and `NewComponent.css`, in t
 
 * `{{variables}}` inside templates
 * Templates with folders
+* Ability to use literally index.* named templates
