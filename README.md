@@ -24,7 +24,7 @@ A template is just a folder that contains files used to generate new files. By d
 
 ### Example of a template for React component
 
-`~/.teg/react-class/index.js`
+#### ~/.teg/react-class/index.js
 
 ```javascript
 import React, { Component } from 'react'
@@ -42,7 +42,7 @@ class {{file}} extends Component {
 export default {{file}}
 ```
 
-`~/.teg/react-class/index.css`
+#### ~/.teg/react-class/index.css
 
 ```css
 .{{file}} {
