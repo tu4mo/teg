@@ -1,6 +1,6 @@
 const assert = require('assert')
 const path = require('path')
-const templatesPath = path.resolve(__dirname, 'templates')
+const templatesPath = path.resolve(__dirname, '..', 'templates')
 
 process.env.TEG_HOME = templatesPath
 
