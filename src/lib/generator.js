@@ -14,7 +14,7 @@ const generateFiles = (input, output) => new Promise((resolve, reject) => {
     }
 
     const templateFileParsed = path.parse(templateFile)
-    const outputFile = templateFileParsed.name === 'index'
+    const outputFile = templateFileParsed.name === '_index'
       ? `${output}${templateFileParsed.ext}`
       : templateFileParsed.base
 

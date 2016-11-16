@@ -13,8 +13,8 @@ describe('template', () => {
       .then(files => {
         const testTemplatePath = path.resolve(testHomePath, 'templates', 'test-template')
         assert.equal(files.length, 3)
-        assert.equal(files.includes(path.resolve(testTemplatePath, 'index.css')), true)
-        assert.equal(files.includes(path.resolve(testTemplatePath, 'index.js')), true)
+        assert.equal(files.includes(path.resolve(testTemplatePath, '_index.css')), true)
+        assert.equal(files.includes(path.resolve(testTemplatePath, '_index.js')), true)
         assert.equal(files.includes(path.resolve(testTemplatePath, 'test.txt')), true)
         done()
       })

@@ -20,11 +20,11 @@ teg <template> <file>
 
 ## Templates
 
-A template is just a folder that contains files used to generate new files. By default, *teg* looks for templates in `~/.teg/templates` directory. Template files named with `index.*` are automatically renamed to the file specified in the <file> parameter.
+A template is just a folder that contains files used to generate new files. By default, *teg* looks for templates in `~/.teg/templates` directory. Template files named with `_index.*` are automatically renamed to the file specified in the <file> parameter.
 
 ### Example of a template for React component with CSS
 
-#### ~/.teg/templates/react-class/index.js
+#### ~/.teg/templates/react-class/\_index.js
 
 ```javascript
 import React, { Component } from 'react'
@@ -42,7 +42,7 @@ class {{file}} extends Component {
 export default {{file}}
 ```
 
-#### ~/.teg/templates/react-class/index.css
+#### ~/.teg/templates/react-class/\_index.css
 
 ```css
 .{{file}} {
@@ -63,6 +63,5 @@ This will generate two new files, `NewComponent.js` and `NewComponent.css`, in t
 * Custom `{{tags}}` inside templates
 * Piping for variables (lowercase, camelcase, etc.)
 * Templates with folders
-* Ability to use literally index.* named templates
 * Automatically install default templates to `~/.teg/templates`
 * Configuration for tags' formatting
