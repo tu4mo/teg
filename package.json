@@ -9,7 +9,13 @@
   "scripts": {
     "test": "eslint . && mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "template",
+    "generator",
+    "boilerplate",
+    "cli",
+    "tool"
+  ],
   "author": "tu4mo",
   "license": "ISC",
   "dependencies": {},
