@@ -6,19 +6,29 @@ const HOME = process.env.TEG_HOME || `${process.env[process.platform === 'win32'
 const getTemplateFiles = (template) => new Promise((resolve, reject) => {
   const templatePath = `${HOME}/templates/${template}`
 
-  fs.readdir(templatePath, (err, dir) => {
-    if (err) {
+  const readdirRecursively = (dir, files = []) => {
+    try {
+      fs.readdirSync(dir).forEach(file => {
+        const fullPath = path.join(dir, file)
+        files.push(fullPath)
+        if (fs.lstatSync(fullPath).isDirectory()) {
+          return readdirRecursively(fullPath, files)
+        }
+      })
+
+      return files
+    } catch (err) {
       return reject(new Error(`Template not found in '${templatePath}'`))
     }
+  }
 
-    if (dir.length === 0) {
-      return reject(new Error(`Template files not found in '${templatePath}'`))
-    }
+  const files = readdirRecursively(templatePath)
 
-    const files = dir.map(file => path.resolve(templatePath, file))
+  if (files.length === 0) {
+    return reject(new Error(`Template files not found in '${templatePath}'`))
+  }
 
-    resolve(files)
-  })
+  resolve(files)
 })
 
 module.exports = {
