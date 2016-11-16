@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.3.0 (2016-11-16)
+
+* Files that will be renamed must be named \_index.*
+* Default path for templates is now ~/.teg/templates
+
 ## 0.2.0 (2016-11-15)
 
 * Add template compiling with {{file}} variable
