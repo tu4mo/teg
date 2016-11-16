@@ -4,7 +4,7 @@ const templatesPath = path.resolve(__dirname)
 
 process.env.TEG_HOME = templatesPath
 
-const template = require('../lib/template')
+const template = require('../src/lib/template')
 
 describe('template', () => {
   describe(`getTemplateFiles`, () => {

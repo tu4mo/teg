@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-const generator = require('../lib/generator')
+const generator = require('../src/lib/generator')
 
 describe('generator', () => {
   describe(`compile`, () => {
