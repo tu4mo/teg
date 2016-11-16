@@ -4,7 +4,7 @@ const path = require('path')
 const HOME = process.env.TEG_HOME || `${process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME']}/.teg`
 
 const getTemplateFiles = (template) => new Promise((resolve, reject) => {
-  const templatePath = `${HOME}/${template}`
+  const templatePath = `${HOME}/templates/${template}`
 
   fs.readdir(templatePath, (err, dir) => {
     if (err) {

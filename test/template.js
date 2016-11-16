@@ -1,8 +1,8 @@
 const assert = require('assert')
 const path = require('path')
-const templatesPath = path.resolve(__dirname)
+const testHomePath = path.resolve(__dirname, 'test-home')
 
-process.env.TEG_HOME = templatesPath
+process.env.TEG_HOME = testHomePath
 
 const template = require('../src/lib/template')
 
@@ -11,11 +11,11 @@ describe('template', () => {
     it('should return 3 template files (index.css, index.js and test.txt)', done => {
       template.getTemplateFiles('test-template')
       .then(files => {
-        const templatePath = path.resolve(templatesPath, 'test-template')
+        const testTemplatePath = path.resolve(testHomePath, 'templates', 'test-template')
         assert.equal(files.length, 3)
-        assert.equal(files.includes(path.resolve(templatePath, 'index.css')), true)
-        assert.equal(files.includes(path.resolve(templatePath, 'index.js')), true)
-        assert.equal(files.includes(path.resolve(templatePath, 'test.txt')), true)
+        assert.equal(files.includes(path.resolve(testTemplatePath, 'index.css')), true)
+        assert.equal(files.includes(path.resolve(testTemplatePath, 'index.js')), true)
+        assert.equal(files.includes(path.resolve(testTemplatePath, 'test.txt')), true)
         done()
       })
       .catch(err => done(err))
