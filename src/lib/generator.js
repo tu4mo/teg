@@ -1,42 +1,53 @@
 const fs = require('fs')
 const path = require('path')
 
-const generateFiles = (input, output) => new Promise((resolve, reject) => {
-  let writtenFiles = []
+const generateFiles = (templatePath, templateFiles, output) => {
+  return new Promise((resolve, reject) => {
+    let writtenFiles = []
 
-  input.forEach(templateFile => {
-    let data
+    templateFiles.forEach(templateFile => {
+      const fullTemplateFilePath = path.resolve(templatePath, templateFile)
+      const outputFile = templateFile.split(path.sep).reduce((prev, curr) => {
+        const parsedFile = path.parse(curr)
+        return path.join(prev, parsedFile.name === '_index' ? `${output}${parsedFile.ext}` : curr)
+      }, '')
 
-    try {
-      data = fs.readFileSync(templateFile, 'utf8')
-    } catch (err) {
-      return reject(new Error(`Unable to read template file '${err.path}'`))
-    }
+      if (fs.lstatSync(fullTemplateFilePath).isDirectory()) {
+        try {
+          fs.mkdirSync(`${outputFile}`)
+        } catch (err) {
+          return reject(new Error(`Unable to create directory '${err.path}'`))
+        }
+      } else {
+        let data
 
-    const templateFileParsed = path.parse(templateFile)
-    const outputFile = templateFileParsed.name === '_index'
-      ? `${output}${templateFileParsed.ext}`
-      : templateFileParsed.base
+        try {
+          data = fs.readFileSync(fullTemplateFilePath, 'utf8')
+        } catch (err) {
+          return reject(new Error(`Unable to read template file '${err.path}'`))
+        }
 
-    data = compile(data, [
-      { name: 'file', value: path.basename(output) }
-    ])
+        data = compile(data, [
+          { name: 'file', value: path.basename(output) }
+        ])
 
-    try {
-      if (fs.existsSync(outputFile)) {
-        return reject(new Error(`File '${outputFile}' already exists`))
+        try {
+          if (fs.existsSync(outputFile)) {
+            return reject(new Error(`File '${outputFile}' already exists`))
+          }
+
+          fs.writeFileSync(outputFile, data)
+        } catch (err) {
+          return reject(new Error(`Unable to write to '${outputFile}'`))
+        }
       }
 
-      fs.writeFileSync(outputFile, data)
-    } catch (err) {
-      return reject(new Error(`Unable to write to '${outputFile}'`))
-    }
+      writtenFiles.push(outputFile)
+    })
 
-    writtenFiles.push(outputFile)
+    resolve(writtenFiles)
   })
-
-  resolve(writtenFiles)
-})
+}
 
 const compile = (body, variables) => {
   variables.forEach(variable => {
