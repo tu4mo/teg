@@ -18,23 +18,16 @@ if (!selectedTemplate || !selectedFile) {
 }
 
 let templateFiles = []
+let writtenFiles = []
 
 try {
   templateFiles = template.getTemplateFiles(templatePath)
-} catch (err) {
-  exitWithError(err)
-}
-
-generator.generateFiles(templatePath, templateFiles, selectedFile)
-.then(writtenFiles => {
+  writtenFiles = generator.generateFiles(templatePath, templateFiles, selectedFile)
   console.log(`Generated ${writtenFiles.length} templates:`)
   writtenFiles.forEach(file => {
     console.log(`    - ${file}`)
   })
-})
-.catch(exitWithError)
-
-function exitWithError (err) {
+} catch (err) {
   console.log(err.message)
   process.exit(1)
 }
