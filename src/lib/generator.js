@@ -49,9 +49,9 @@ const generateFiles = (templatePath, templateFiles, output) => {
   })
 }
 
-const compile = (body, variables) => {
-  variables.forEach(variable => {
-    body = body.split(`{{${variable.name}}}`).join(variable.value)
+const compile = (body, tags) => {
+  tags.forEach(tag => {
+    body = body.split(`{{${tag.name}}}`).join(tag.value)
   })
 
   return body
