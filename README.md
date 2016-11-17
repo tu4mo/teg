@@ -20,7 +20,9 @@ teg <template> <file>
 
 ## Templates
 
-A template is just a folder that contains files used to generate new files. By default, *teg* looks for templates in `~/.teg/templates` directory. Template files named with `_index.*` are automatically renamed to the file specified in the <file> parameter.
+* A template is just a folder that contains files used to generate new files.
+* By default, teg looks for templates in `~/.teg/templates` directory.
+* Template's files and folders named `_index(.*)` are automatically renamed to the file specified in the <file> parameter.
 
 ### Example of a template for React component with CSS
 
