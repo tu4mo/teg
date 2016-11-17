@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.4.0 (2016-11-17)
+
+* Add support for templates with folders
+
 ## 0.3.0 (2016-11-16)
 
 * Files that will be renamed must be named \_index.*

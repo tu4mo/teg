@@ -62,6 +62,5 @@ This will generate two new files, `NewComponent.js` and `NewComponent.css`, in t
 
 * Custom `{{tags}}` inside templates
 * Piping for variables (lowercase, camelcase, etc.)
-* Templates with folders
 * Automatically install default templates to `~/.teg/templates`
 * Configuration for tags' formatting
