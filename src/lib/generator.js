@@ -1,3 +1,4 @@
+const changeCase = require('change-case')
 const fs = require('fs')
 const path = require('path')
 
@@ -49,7 +50,16 @@ const generateFiles = (templatePath, templateFiles, output) => {
 
 const compile = (body, tags) => {
   tags.forEach(tag => {
-    body = body.split(`{{${tag.name}}}`).join(tag.value)
+    const tagRegExp = new RegExp(`{{(${tag.name}\\|?[a-zA-Z]*)}}`, 'g')
+    let tagArray
+    while ((tagArray = tagRegExp.exec(body)) !== null) {
+      const fullTag = tagArray[0]
+      const tagContent = tagArray[1]
+      const pipe = tagContent.split('|')[1]
+      const value = pipe ? changeCase[pipe](tag.value) : tag.value
+
+      body = body.split(fullTag).join(value)
+    }
   })
 
   return body

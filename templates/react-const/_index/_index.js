@@ -4,7 +4,7 @@ import './{{file}}.css'
 
 const {{file}} = (props) => {
   return (
-    <div className="{{file}}">
+    <div className="{{file|paramCase}}">
 
     </div>
   )

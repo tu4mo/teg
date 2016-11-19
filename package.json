@@ -18,7 +18,9 @@
   ],
   "author": "tu4mo",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "change-case": "^3.0.0"
+  },
   "devDependencies": {
     "eslint": "^3.10.2",
     "eslint-config-standard": "^6.2.1",
