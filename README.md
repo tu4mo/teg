@@ -24,6 +24,12 @@ teg <template> <file>
 * Place templates in `~/.teg/templates` directory.
 * Template's files and folders named `_index(.*)` are automatically renamed to the file specified in the <file> parameter.
 
+### Tags
+
+* You can use tags inside templates.
+* Currently only supported tag is `{{file}}`.
+* The case of the value of a tag can be changed by piping: `{{file|paramCase}}`. Check out [available methods](https://github.com/blakeembrey/change-case).
+
 ### Example of a template
 
 A template can contain anything. Here's any example of a template to create React component classes, with a CSS file.
@@ -36,7 +42,7 @@ import React, { Component } from 'react'
 class {{file}} extends Component {
   render () {
     return (
-      <div className="{{file}}">
+      <div className="{{file|paramCase}}">
 
       </div>
     )
@@ -49,7 +55,7 @@ export default {{file}}
 #### ~/.teg/templates/react-class/\_index.css
 
 ```css
-.{{file}} {
+.{{file|paramCase}} {
   display: flex;
 }
 ```
@@ -60,11 +66,10 @@ To generate files from this template, run:
 teg react-class NewComponent
 ```
 
-This will generate two new files, `NewComponent.js` and `NewComponent.css`, in the current working directory, replacing `{{file}}` tag with `NewComponent`.
+This will generate two new files, `NewComponent.js` and `NewComponent.css`, in the current working directory, replacing `{{file}}` tag with `NewComponent` and `{{file|paramCase}}` with `new-component`.
 
 ## TODO
 
 * Custom `{{tags}}` inside templates
-* Piping for variables (lowercase, camelcase, etc.)
 * Automatically install default templates to `~/.teg/templates`
 * Configuration for tags' formatting
