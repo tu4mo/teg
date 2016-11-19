@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.5.0 (2016-11-19)
+
+* Add support for changing case of tag's values
+
 ## 0.4.0 (2016-11-17)
 
 * Add support for templates with folders
