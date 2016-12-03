@@ -1,5 +1,4 @@
 const path = require('path')
-
 const readdirRecursively = require('../util/readdirRecursively')
 
 const getTemplateFiles = (templatePath) => {
