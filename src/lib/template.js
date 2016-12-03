@@ -1,5 +1,6 @@
-const fs = require('fs')
 const path = require('path')
+
+const readdirRecursively = require('../util/readdirRecursively')
 
 const getTemplateFiles = (templatePath) => {
   const files = readdirRecursively(templatePath).map(file => {
@@ -11,22 +12,6 @@ const getTemplateFiles = (templatePath) => {
   }
 
   return files
-}
-
-const readdirRecursively = (dir, files = []) => {
-  try {
-    fs.readdirSync(dir).forEach(file => {
-      const fullPath = path.join(dir, file)
-      files.push(fullPath)
-      if (fs.lstatSync(fullPath).isDirectory()) {
-        return readdirRecursively(fullPath, files)
-      }
-    })
-
-    return files
-  } catch (err) {
-    throw new Error(`Template not found in '${err.path}'`)
-  }
 }
 
 module.exports = {
