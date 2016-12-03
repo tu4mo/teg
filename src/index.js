@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const HOME = process.env.TEG_HOME || `${process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME']}/.teg`
+const config = require('./config')
 
 const generator = require('./lib/generator')
 const template = require('./lib/template')
@@ -9,7 +9,7 @@ const argv = process.argv
 const selectedTemplate = argv[2] || ''
 const selectedFile = argv[3] || ''
 
-const templatesPath = `${HOME}/templates`
+const templatesPath = `${config.HOME}/templates`
 const templatePath = `${templatesPath}/${selectedTemplate}`
 
 if (!selectedTemplate || !selectedFile) {
