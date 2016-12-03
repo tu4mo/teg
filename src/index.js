@@ -13,7 +13,7 @@ const templatesPath = `${config.HOME}/templates`
 const templatePath = `${templatesPath}/${selectedTemplate}`
 
 if (!selectedTemplate || !selectedFile) {
-  console.log('usage: teg <template> <file>')
+  console.log('Usage: teg <template> <file>')
   process.exit(1)
 }
 
