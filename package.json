@@ -35,5 +35,6 @@
   "bugs": {
     "url": "https://github.com/tu4mo/teg/issues"
   },
-  "homepage": "https://github.com/tu4mo/teg"
+  "homepage": "https://github.com/tu4mo/teg",
+  "preferGlobal": true
 }
