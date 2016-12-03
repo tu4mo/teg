@@ -63,7 +63,7 @@ export default {{file}}
 To generate files from this template, run:
 
 ```sh
-teg react-class NewComponent
+$ teg react-class NewComponent
 ```
 
 This will generate two new files, `NewComponent.js` and `NewComponent.css`, in the current working directory, replacing `{{file}}` tag with `NewComponent` and `{{file|paramCase}}` with `new-component`.
