@@ -1,4 +1,7 @@
-const HOME = process.env.TEG_HOME || `${process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME']}/.teg`
+const os = require('os')
+const path = require('path')
+
+const HOME = process.env.TEG_HOME || path.join(os.homedir(), '.teg')
 
 module.exports = {
   HOME
