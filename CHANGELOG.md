@@ -1,5 +1,9 @@
 # Change Log
 
+## Next (2016-12-05)
+
+* Default templates are copied to ~/.teg on install
+
 ## 0.5.0 (2016-11-19)
 
 * Add support for changing case of tag's values
