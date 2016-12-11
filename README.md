@@ -12,6 +12,8 @@ Install it once globally:
 npm install -g teg
 ```
 
+This also installs default templates to `~/.teg/templates`
+
 ## Usage
 
 ```sh
@@ -71,5 +73,4 @@ This will generate two new files, `NewComponent.js` and `NewComponent.css`, in t
 ## TODO
 
 * Custom `{{tags}}` inside templates
-* Automatically install default templates to `~/.teg/templates`
 * Configuration for tags' formatting
