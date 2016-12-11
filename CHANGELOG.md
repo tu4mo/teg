@@ -1,6 +1,6 @@
 # Change Log
 
-## Next (2016-12-05)
+## 0.6.0 (2016-12-11)
 
 * Default templates are copied to ~/.teg on install
 
