@@ -12,8 +12,6 @@ Install it once globally:
 npm install -g teg
 ```
 
-This also installs default templates to `~/.teg/templates`
-
 ## Usage
 
 ```sh
@@ -24,7 +22,7 @@ teg <template> <file>
 
 * A template is just a folder that contains files used to generate new files.
 * Place templates in `~/.teg/templates` directory.
-* Template's files and folders named `_index(.*)` are automatically renamed to the file specified in the <file> parameter.
+* Template's files and folders named `_index(.*)` are automatically renamed to the file specified in the `<file>` parameter.
 
 ### Tags
 
