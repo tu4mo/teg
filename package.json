@@ -7,7 +7,6 @@
     "teg": "./src/index.js"
   },
   "scripts": {
-    "postinstall": "node src/install.js",
     "test": "eslint . && mocha"
   },
   "keywords": [
