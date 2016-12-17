@@ -1,8 +1,9 @@
-[![Build Status](https://travis-ci.org/tu4mo/teg.svg?branch=master)](https://travis-ci.org/tu4mo/teg)
-
 # teg
 
 *teg* is command-line utility to generate customized template/boilerplate files and folders.
+
+[![Build Status](https://travis-ci.org/tu4mo/teg.svg?branch=master)](https://travis-ci.org/tu4mo/teg)
+[![dependencies Status](https://david-dm.org/tu4mo/teg/status.svg)](https://david-dm.org/tu4mo/teg)
 
 ## Installation
 
