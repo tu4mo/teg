@@ -11,8 +11,7 @@ const argv = process.argv
 const selectedTemplate = argv[2] || ''
 const selectedFile = argv[3] || ''
 
-const templatesPath = `${config.HOME}/templates`
-const templatePath = `${templatesPath}/${selectedTemplate}`
+const templatePath = `${config.HOME_TEMPLATES_DIR}/${selectedTemplate}`
 
 if (!selectedTemplate || !selectedFile) {
   console.log('Usage: teg <template> <file>')
