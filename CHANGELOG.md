@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.7.1 (2016-12-19)
+
+* Fix template's path
+
 ## 0.7.0 (2016-12-12)
 
 * Change the way default templates are copied
