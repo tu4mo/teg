@@ -56,6 +56,11 @@ const compile = (body, tags) => {
       const fullTag = tagArray[0]
       const tagContent = tagArray[1]
       const pipe = tagContent.split('|')[1]
+
+      if (pipe && typeof changeCase[pipe] !== 'function') {
+        throw new Error(`Pipe "${pipe}" doesn't exist.`)
+      }
+
       const value = pipe ? changeCase[pipe](tag.value) : tag.value
 
       body = body.split(fullTag).join(value)

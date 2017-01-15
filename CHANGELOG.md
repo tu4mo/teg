@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.7.2 (2017-01-15)
+
+* Better error handling for invalid converter/pipe
+
 ## 0.7.1 (2016-12-19)
 
 * Fix template's path

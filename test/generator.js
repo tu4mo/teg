@@ -19,5 +19,14 @@ describe('generator', () => {
       ])
       assert.equal(output, '<div>test-word</div>')
     })
+
+    it('should throw error with unexisting converter', () => {
+      assert.throws(() => {
+        const template = '<div>{{file|nonExistingConverter}}</div>'
+        generator.compile(template, [
+          { name: 'file', value: 'TestWord' }
+        ])
+      })
+    })
   })
 })
