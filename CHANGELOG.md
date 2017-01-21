@@ -1,5 +1,9 @@
 # Change Log
 
+## Next
+
+* Refactor installer
+
 ## 0.7.2 (2017-01-15)
 
 * Better error handling for invalid converter/pipe

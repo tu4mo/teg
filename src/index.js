@@ -2,7 +2,7 @@
 
 const config = require('./config')
 
-require('./install')
+require('./lib/installer').install()
 
 const generator = require('./lib/generator')
 const template = require('./lib/template')
