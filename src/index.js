@@ -4,8 +4,8 @@ const config = require('./config')
 
 require('./lib/installer').install()
 
-const generator = require('./lib/generator')
-const template = require('./lib/template')
+const { generateFiles } = require('./lib/generator')
+const { getTemplateFiles } = require('./lib/template')
 
 const [ , , selectedTemplate, selectedFile ] = process.argv
 const templatePath = `${config.HOME_TEMPLATES_DIR}/${selectedTemplate}`
@@ -15,12 +15,9 @@ if (!selectedTemplate || !selectedFile) {
   process.exit(1)
 }
 
-let templateFiles = []
-let writtenFiles = []
-
 try {
-  templateFiles = template.getTemplateFiles(templatePath)
-  writtenFiles = generator.generateFiles(templatePath, templateFiles, selectedFile)
+  const templateFiles = getTemplateFiles(templatePath)
+  const writtenFiles = generateFiles(templatePath, templateFiles, selectedFile)
   console.log(`Generated ${writtenFiles.length} templates:`)
   writtenFiles.forEach(file => {
     console.log(`    - ${file}`)
