@@ -1,6 +1,6 @@
 # Change Log
 
-## Next
+## 0.7.3 (2017-03-05)
 
 * Refactor installer
 
