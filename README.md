@@ -34,27 +34,23 @@ teg <template> <file>
 
 ### Example of a template
 
-A template can contain anything. Here's any example of a template to create React component classes, with a CSS file.
+A template can contain anything. Here's any example of a template to create React component, with a CSS file.
 
-#### ~/.teg/templates/react-class/\_index.js
+#### ~/.teg/templates/react-const/\_index.js
 
 ```javascript
 import React, { Component } from 'react'
 
-class {{file}} extends Component {
-  render () {
-    return (
-      <div className="{{file|paramCase}}">
+const {{file}} = () => (
+  <div className="{{file|paramCase}}">
 
-      </div>
-    )
-  }
-}
+  </div>
+)
 
 export default {{file}}
 ```
 
-#### ~/.teg/templates/react-class/\_index.css
+#### ~/.teg/templates/react-const/\_index.css
 
 ```css
 .{{file|paramCase}} {
@@ -65,7 +61,7 @@ export default {{file}}
 To generate files from this template, run:
 
 ```sh
-$ teg react-class NewComponent
+$ teg react-const NewComponent
 ```
 
 This will generate two new files, `NewComponent.js` and `NewComponent.css`, in the current working directory, replacing `{{file}}` tag with `NewComponent` and `{{file|paramCase}}` with `new-component`.
