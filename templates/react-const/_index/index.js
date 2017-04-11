@@ -1,2 +1,1 @@
-import {{file}} from './{{file}}'
-export default {{file}}
+export { default } from './{{file}}'

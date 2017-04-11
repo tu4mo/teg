@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import './{{file}}.css'
 
@@ -9,6 +10,10 @@ class {{file}} extends Component {
 
       </div>
     )
+  }
+
+  static propTypes = {
+    
   }
 }
 
