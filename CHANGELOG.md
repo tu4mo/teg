@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.7.4 (2017-04-11)
+
+* Update React templates
+
 ## 0.7.3 (2017-03-05)
 
 * Refactor installer
