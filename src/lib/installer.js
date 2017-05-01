@@ -29,7 +29,10 @@ const copyTemplates = (from, to) => {
     createFolder(fullHomePath)
 
     readdirRecursively(fullPath).forEach(file => {
-      const fileInHome = path.join(fullHomePath, file.replace(`${fullPath}${path.sep}`, ''))
+      const fileInHome = path.join(
+        fullHomePath,
+        file.replace(`${fullPath}${path.sep}`, '')
+      )
 
       try {
         if (fs.lstatSync(file).isDirectory()) {

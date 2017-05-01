@@ -9,7 +9,9 @@ const template = require('../src/lib/template')
 describe('template', () => {
   describe('getTemplateFiles', () => {
     it('should return 3 template files and 1 folder', () => {
-      const files = template.getTemplateFiles(path.join(testHomePath, 'templates/test-template'))
+      const files = template.getTemplateFiles(
+        path.join(testHomePath, 'templates/test-template')
+      )
 
       assert.equal(files.length, 4)
       assert.equal(files.includes('_index.css'), true)

@@ -7,7 +7,7 @@ require('./lib/installer').install()
 const { generateFiles } = require('./lib/generator')
 const { getTemplateFiles } = require('./lib/template')
 
-const [ , , selectedTemplate, selectedFile ] = process.argv
+const [, , selectedTemplate, selectedFile] = process.argv
 const templatePath = `${config.HOME_TEMPLATES_DIR}/${selectedTemplate}`
 
 if (!selectedTemplate || !selectedFile) {

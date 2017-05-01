@@ -23,9 +23,7 @@ describe('generator', () => {
     it('should throw error with unexisting converter', () => {
       assert.throws(() => {
         const template = '<div>{{file|nonExistingConverter}}</div>'
-        generator.compile(template, [
-          { name: 'file', value: 'TestWord' }
-        ])
+        generator.compile(template, [{ name: 'file', value: 'TestWord' }])
       })
     })
   })

@@ -9,7 +9,10 @@ const generateFiles = (templatePath, templateFiles, output) => {
     const fullTemplateFilePath = path.resolve(templatePath, templateFile)
     const outputFile = templateFile.split(path.sep).reduce((prev, curr) => {
       const parsedFile = path.parse(curr)
-      return path.join(prev, parsedFile.name === '_index' ? `${output}${parsedFile.ext}` : curr)
+      return path.join(
+        prev,
+        parsedFile.name === '_index' ? `${output}${parsedFile.ext}` : curr
+      )
     }, '')
 
     if (fs.lstatSync(fullTemplateFilePath).isDirectory()) {
@@ -27,9 +30,7 @@ const generateFiles = (templatePath, templateFiles, output) => {
         throw new Error(`Unable to read template file '${err.path}'`)
       }
 
-      data = compile(data, [
-        { name: 'file', value: path.basename(output) }
-      ])
+      data = compile(data, [{ name: 'file', value: path.basename(output) }])
 
       if (fs.existsSync(outputFile)) {
         throw new Error(`File '${outputFile}' already exists`)

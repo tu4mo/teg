@@ -1,7 +1,7 @@
 const path = require('path')
 const readdirRecursively = require('../util/readdirRecursively')
 
-const getTemplateFiles = (templatePath) => {
+const getTemplateFiles = templatePath => {
   const files = readdirRecursively(templatePath).map(file => {
     return file.replace(`${templatePath}${path.sep}`, '')
   })
