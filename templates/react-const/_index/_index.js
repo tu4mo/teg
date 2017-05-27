@@ -1,9 +1,8 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-
 import './{{file}}.css'
 
-const {{file}} = (props) => {
+const {{file}} = props => {
   return (
     <div className="{{file|paramCase}}">
 
