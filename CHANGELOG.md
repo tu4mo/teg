@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.7.5 (2017-07-01)
+
+* Add React templates with SCSS
+
 ## 0.7.4 (2017-04-11)
 
 * Update React templates
