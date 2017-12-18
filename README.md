@@ -1,5 +1,7 @@
 # teg
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tu4mo/teg.svg)](https://greenkeeper.io/)
+
 *teg* is command-line utility to generate customized template/boilerplate files and folders.
 
 [![Build Status](https://travis-ci.org/tu4mo/teg.svg?branch=master)](https://travis-ci.org/tu4mo/teg)
