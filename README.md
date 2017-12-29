@@ -18,6 +18,8 @@ npm install -g teg
 
 ## Usage
 
+Teg accepts two arguments. `template` defines which template to use. `file` defines the output filename.
+
 ```sh
 teg <template> <file>
 ```
@@ -31,8 +33,8 @@ teg <template> <file>
 ### Tags
 
 * You can use tags inside templates.
-* Currently only supported tag is `{{file}}`.
-* The case of the value of a tag can be changed by piping: `{{file|paramCase}}`. Check out [available methods](https://github.com/blakeembrey/change-case).
+* Currently only supported tag is `{{file}}`, which will be replaced by the name defined for `file` argument.
+* The case of the value of a tag can be changed by using a pipe: `{{file|paramCase}}`. Check out [available methods](https://github.com/blakeembrey/change-case).
 
 ### Example of a template
 
