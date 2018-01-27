@@ -1,6 +1,11 @@
 # Change Log
 
-## 0.7.5 (2017-07-01)
+## 1.0.0 (2018-01-27)
+
+* Official release
+* No notable changes
+
+## 0.8.0 (2017-07-01)
 
 * Add React templates with SCSS
 
