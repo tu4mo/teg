@@ -7,7 +7,7 @@ class {{file}} extends Component {
 
   }
 
-  render () {
+  render() {
     return (
       <div className="{{file|paramCase}}">
 
